@@ -1,0 +1,207 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(qmYxR.png); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+main
+{
+	background-color: #64606c;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.parking-sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #FF5733, #FFD700, #00FF00, #0000FF, #800080, #FF5733);
+    background-size: 1200% 100%;
+    animation: flashing 3s linear infinite;
+}
+
+.flashing-text {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.parkingLot
+{
+	background: url('parkinglot.png') no-repeat center center;
+	background-size: cover;
+	width: 600px;
+	height: 300px;
+	position: relative; 
+}
+
+/*Cars*/
+.car1
+{
+	background: url('car1.png') no-repeat center center;
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	position: relative; top: 120px;
+	animation: car1_LeftAndRotate 4s linear forwards, car1_down 1s linear 4s forwards;
+}
+
+.car2
+{
+	background: url('car2.png') no-repeat center center;
+	background-size: cover;
+	width: 20%;
+	height: 17%;
+	position: relative; top: 40px; left: -200%;
+	animation: car2_LeftAndRotate 5s linear 10s forwards, car2_down 1s linear 15s forwards;
+}
+
+.car3
+{
+	background: url('car3.png') no-repeat center center;
+	background-size: cover;
+	width: 10%;
+	height: 30%;
+	position: relative; bottom: 50%; left: 46%;
+	animation: car3_downAndRotate 2s linear 6s forwards, car3_Left 6s linear 8s forwards;
+}
+
+.car4
+{
+	background: url('car4.png') no-repeat center center;
+	background-size: cover;
+	width: 10%;
+	height: 40%;
+	position: relative; bottom: 19%; left: 46%;
+	animation: car4_upAndRotate 2s linear 8s forwards, car4_Left 6s linear 10s forwards;
+}
+
+#car5
+{
+	width: 16%;
+	height: 16%;
+	position: relative; bottom: 92%; left: -200%;
+	animation: car5_leftAndRotate 4s linear 15s forwards, car5_Up 1s linear 19s forwards;
+}
+
+#car6
+{
+	width: 16%;
+	height: 16%;
+	transform: rotate(-90deg);
+	position: relative; bottom: 133%; left: 47%;
+	animation: car6_downAndRotate 2s linear forwards, car6_Left 4s linear 4s forwards; 
+}
+
+#car7
+{
+	width: 110px;
+	height: 110px;
+	position: relative; bottom: 170px; left: 235px;
+}
+
+#car8
+{
+	width: 110px;
+	height: 80px;
+	transform: rotate(90deg);
+	position: relative; bottom: 380px; left: 115px;
+}
+
+/*Animations*/
+@keyframes car1_LeftAndRotate
+{
+    0% {left: -200%; transform: rotate(0deg);}
+    50% {left: 32%; transform: rotate(0deg);}     
+    100% {left: 32%; transform: rotate(90deg);}
+}
+
+@keyframes car1_down 
+{
+	100% {top: 200px;}
+}
+
+@keyframes car2_LeftAndRotate
+{
+    0% {left: -200%; transform: rotate(0deg);}
+    50% {left: 62%; transform: rotate(0deg);}     
+    100% {left: 62%; transform: rotate(90deg);}
+}
+
+@keyframes car2_down  
+{
+	100% {top: 118px;}
+}
+
+@keyframes car3_downAndRotate
+{
+	0% {bottom: 50%; transform: rotate(0deg);}
+	50% {bottom: 25%; transform: rotate(0deg);}
+	100% {bottom: 25%; transform: rotate(90deg);}
+}
+
+@keyframes car3_Left
+{
+    0% {left: 43%;}
+    50% {left: -200%;}     
+    100% {left: -200%;}
+}
+
+@keyframes car4_upAndRotate
+{
+	0% {bottom: 23%; transform: rotate(0deg);}
+	50% {bottom: 63%; transform: rotate(0deg);}
+	100% {bottom: 63%; transform: rotate(-90deg);}
+}
+
+@keyframes car4_Left
+{
+    0% {left: 46%;}
+    50% {left: -200%;}     
+    100% {left: -200%;}
+}
+
+@keyframes car5_leftAndRotate
+{
+	0% {left: -200%; transform: rotate(0deg);}
+    50% {left: 53.5%; transform: rotate(0deg);}     
+    100% {left: 53.5%; transform: rotate(-90deg);}
+}
+
+@keyframes car5_Up
+{
+	100% {bottom: 133%;}
+}
+
+@keyframes car6_downAndRotate
+{
+	0% {bottom: 133%; transform: rotate(-90deg);}
+	50% {bottom: 110%; transform: rotate(-90deg);}
+	100% {bottom: 110%; transform: rotate(-180deg);}
+}
+
+@keyframes car6_Left
+{
+    0% {left: 47%;}
+    50% {left: -200%;}     
+    100% {left: -200%;}
+}
+
+@keyframes flashing {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
